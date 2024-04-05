@@ -22,8 +22,38 @@ const config: Configuration = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        type: "asset/resource",
+        test: /\.(png|jpe?g|gif|webp)$/i,
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "assets/images",
+        },
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: require.resolve("@svgr/webpack"),
+            options: {
+              prettier: false,
+              svgo: false,
+              svgoConfig: {
+                plugins: [{ removeViewBox: false }],
+              },
+              titleProp: true,
+              ref: true,
+            },
+          },
+          {
+            loader: require.resolve("file-loader"),
+            options: {
+              name: "static/media/[name].[hash].[ext]",
+            },
+          },
+        ],
+        issuer: {
+          and: [/\.(ts|tsx|js|jsx|md|mdx)$/],
+        },
       },
     ],
   },

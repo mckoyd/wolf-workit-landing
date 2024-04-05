@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createHashRouter } from "react-router-dom";
+import App from "./pages/App";
+
+import "./styles/index.css";
 
 const router = createHashRouter([
   {
     path: "/*",
-    element: <h1>Hello World of React/TS/ReactRouter on Github!</h1>,
+    element: <App />,
   },
 ]);
 
