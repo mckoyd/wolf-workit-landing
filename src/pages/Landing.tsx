@@ -37,9 +37,9 @@ const Landing: React.FC = () => {
           </a>
         </header>
         <div className="landing__hero-container">
-          {isDesktop && (
+          {isDesktop ? (
             <BgLeftPatternDesktop className="landing__bg-left-pattern" />
-          )}
+          ) : null}
           {isTablet && (
             <BgLeftPatternTablet className="landing__bg-left-pattern" />
           )}
@@ -49,10 +49,9 @@ const Landing: React.FC = () => {
             </p>
             <button className="landing__learn-more-btn">Learn more</button>
           </div>
-          {isDesktop ||
-            (isTablet && (
-              <BgRightPattern className="landing__bg-right-pattern" />
-            ))}
+          {isDesktop || isTablet ? (
+            <BgRightPattern className="landing__bg-right-pattern" />
+          ) : null}
         </div>
         <img
           src={ImageHero}

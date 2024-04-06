@@ -6,8 +6,8 @@
   border-bottom-right-radius: 140em 20em;
   border-bottom-left-radius: 140em 20em;
   margin-bottom: 5em;
-  z-index: 100;
-  position: relative;
+  z-index: 1;
+  width: 100%;
 }
 
 .landing__header {
@@ -274,4 +274,12 @@
 }
 
 @media only screen and (min-width: 1200px) {
+  .landing__bg-left-pattern {
+    margin-left: -10em;
+  }
+
+  .landing__bg-right-pattern {
+    margin-left: 0em;
+    align-self: flex-end;
+  }
 }
