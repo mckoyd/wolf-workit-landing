@@ -9,10 +9,12 @@ const SellingPointContainer: React.FC<ISellingPointContainer> = ({
   return (
     <div className="landing__selling-point-container">
       <p className="landing__selling-point-number">{index + 1}</p>
-      <p className="landing__selling-point">{sellingPointTitle}</p>
-      <p className="landing__selling-point-description">
-        {sellingPointDescription}
-      </p>
+      <div className="landing__selling-point-text-container">
+        <p className="landing__selling-point">{sellingPointTitle}</p>
+        <p className="landing__selling-point-description">
+          {sellingPointDescription}
+        </p>
+      </div>
     </div>
   );
 };

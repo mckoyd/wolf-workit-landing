@@ -166,3 +166,95 @@
   gap: 1em;
   margin-bottom: 2em;
 }
+
+@media only screen and (min-width: 600px) {
+  .landing__header {
+    margin: 0 2em;
+  }
+
+  .landing__access-link {
+    font-size: 1.2em;
+  }
+
+  .landing__hero-container {
+    margin: 1em 1em 0 1em;
+    font-size: 5em;
+  }
+  .landing__learn-more-btn {
+    width: 35%;
+    font-size: 0.3em;
+    font-weight: bold;
+  }
+
+  .landing__hero-image {
+    margin: 0px auto -12em auto;
+  }
+
+  .landing__selling-points {
+    padding: 16em 3em 3em 3em;
+  }
+
+  .landing__selling-point-number {
+    padding: 0.75em 1.2em;
+  }
+
+  .landing__selling-point-container {
+    flex-direction: row;
+    gap: 1em;
+    padding: 0 2em;
+  }
+
+  .landing__selling-point-text-container {
+    text-align: left;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .landing__selling-point-description {
+    margin: 0;
+    font-size: 1.3em;
+  }
+
+  .landing__selling-point {
+    font-size: 2em;
+  }
+
+  .landing__first-tester-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .landing__founder-image {
+    width: 50%;
+  }
+
+  .landing__tester-text-container {
+    margin: 8em 1em 1em -4em;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .landing__tester-text-description {
+    text-align: left;
+    margin: 0 1.5em 2em 1.5em;
+    font-size: 0.675em;
+  }
+
+  .landing__access-btn {
+    margin: 0 1.5em;
+    font-size: 0.675em;
+  }
+
+  .landing__footer-container {
+    gap: 1em;
+  }
+
+  .landing__social-links {
+    gap: 1.5em;
+    margin-bottom: 5em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+}
