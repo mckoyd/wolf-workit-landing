@@ -153,3 +153,16 @@
   background: #44ffa1;
   color: #24053e;
 }
+
+.landing__footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing__social-links {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 2em;
+}

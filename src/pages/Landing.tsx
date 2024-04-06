@@ -1,5 +1,9 @@
 import React from "react";
 import { ReactComponent as LogoLight } from "../assets/images/logo-light.svg";
+import { ReactComponent as LogoDark } from "../assets/images/logo-dark.svg";
+import { ReactComponent as IconFacebook } from "../assets/images/icon-facebook.svg";
+import { ReactComponent as IconInstagram } from "../assets/images/icon-instagram.svg";
+import { ReactComponent as IconTwitter } from "../assets/images/icon-twitter.svg";
 import ImageHero from "../assets/images/image-hero.webp";
 import ImageFounder from "../assets/images/image-founder.webp";
 
@@ -64,6 +68,14 @@ const Landing: React.FC = () => {
           </button>
         </div>
       </div>
+      <footer className="landing__footer-container">
+        <LogoDark className="landing__logo" />
+        <div className="landing__social-links">
+          <IconFacebook className="landing__icon" />
+          <IconTwitter className="landing__icon" />
+          <IconInstagram className="landing__icon" />
+        </div>
+      </footer>
     </>
   );
 };
