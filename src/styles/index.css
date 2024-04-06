@@ -27,7 +27,7 @@
   font-style: normal;
   src: url(../assets/fonts/fraunces/Fraunces-VariableFont.ttf),
     format("truetype supports variations");
-  font-weight: 300, 600;
+  font-weight: 300, 400, 600;
   font-display: swap;
 }
 

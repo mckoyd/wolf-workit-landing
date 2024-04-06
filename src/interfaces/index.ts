@@ -1,5 +1,10 @@
-interface ISocialButton {
-  buttonText: string;
+interface ISellingPoint {
+  sellingPointTitle: string;
+  sellingPointDescription: string;
 }
 
-export { ISocialButton };
+interface ISellingPointContainer extends ISellingPoint {
+  index: number;
+}
+
+export { ISellingPointContainer, ISellingPoint };
