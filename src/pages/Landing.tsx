@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ReactComponent as LogoLight } from "../assets/images/logo-light.svg";
 import { ReactComponent as LogoDark } from "../assets/images/logo-dark.svg";
 import { ReactComponent as IconFacebook } from "../assets/images/icon-facebook.svg";
@@ -11,8 +11,22 @@ import "../styles/Landing.css";
 import { APPLY_LINK_TEXT, sellingPoints } from "../config/Landing.config";
 import { ISellingPoint } from "../interfaces";
 import SellingPointContainer from "../components/SellingPointContainer";
+import useScreenSizeUpdate from "../hooks/useScreenSizeUpdate";
+
+import { ReactComponent as BgLeftPatternDesktop } from "../assets/images/bg-pattern-1.svg";
+import { ReactComponent as BgRightPattern } from "../assets/images/bg-pattern-2.svg";
+import { ReactComponent as BgLeftPatternTablet } from "../assets/images/bg-pattern-3.svg";
 
 const Landing: React.FC = () => {
+  const screenSize = useScreenSizeUpdate();
+  const [isDesktop, setIsDesktop] = useState<boolean>(false);
+  const [isTablet, setIsTablet] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsDesktop(screenSize >= 1200);
+    setIsTablet(screenSize >= 600 && screenSize < 1200);
+  }, [screenSize]);
+
   return (
     <>
       <div className="landing__heading-hero-container">
@@ -23,10 +37,22 @@ const Landing: React.FC = () => {
           </a>
         </header>
         <div className="landing__hero-container">
-          <p className="landing__hero-title">
-            Data <span className="underlined">tailored</span> to your needs.
-          </p>
-          <button className="landing__learn-more-btn">Learn more</button>
+          {isDesktop && (
+            <BgLeftPatternDesktop className="landing__bg-left-pattern" />
+          )}
+          {isTablet && (
+            <BgLeftPatternTablet className="landing__bg-left-pattern" />
+          )}
+          <div className="landing__hero-text">
+            <p className="landing__hero-title">
+              Data <span className="underlined">tailored</span> to your needs.
+            </p>
+            <button className="landing__learn-more-btn">Learn more</button>
+          </div>
+          {isDesktop ||
+            (isTablet && (
+              <BgRightPattern className="landing__bg-right-pattern" />
+            ))}
         </div>
         <img
           src={ImageHero}

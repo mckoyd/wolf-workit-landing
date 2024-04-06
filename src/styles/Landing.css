@@ -33,6 +33,9 @@
 }
 
 .landing__hero-container {
+}
+
+.landing__hero-text {
   display: flex;
   flex-direction: column;
   font-family: "Fraunces";
@@ -177,9 +180,14 @@
   }
 
   .landing__hero-container {
+    display: flex;
+  }
+
+  .landing__hero-text {
     margin: 1em 1em 0 1em;
     font-size: 5em;
   }
+
   .landing__learn-more-btn {
     width: 35%;
     font-size: 0.3em;
@@ -253,6 +261,15 @@
   .landing__social-links {
     gap: 1.5em;
     margin-bottom: 5em;
+  }
+
+  .landing__bg-left-pattern {
+    margin-left: -5em;
+  }
+
+  .landing__bg-right-pattern {
+    margin-right: -5em;
+    align-self: flex-end;
   }
 }
 
